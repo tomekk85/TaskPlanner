@@ -1,0 +1,26 @@
+﻿@model TaskPlanner.Models.TaskModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Usuń zadanie</h1>
+
+<h3>Czy jesteś pewien, że chcesz usunąć to zadanie?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Wróć do Listy Zadań</a>
+    </form>
+</div>
